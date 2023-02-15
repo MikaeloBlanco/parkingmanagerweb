@@ -1,14 +1,14 @@
 package com.parkingmanager.parkingmanagerweb.sorteo;
 
-import java.util.Date;
+//import java.util.Date;
 
 public class Sorteo {
     
     private String descripcion;
-    private Date fecha;
+    private String fecha;
     private String estado;
 
-    public Sorteo(String descripcion, Date fecha, String estado){
+    public Sorteo(String descripcion, String fecha, String estado){
 
         this.descripcion = descripcion;
 
@@ -26,11 +26,11 @@ public class Sorteo {
         this.descripcion = descripcion;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

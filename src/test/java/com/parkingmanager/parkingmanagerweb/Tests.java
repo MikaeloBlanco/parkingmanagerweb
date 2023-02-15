@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-//import com.parkingmanager.parkingmanagerweb.sorteo.Sorteo;
+import com.parkingmanager.parkingmanagerweb.sorteo.Sorteo;
 import com.parkingmanager.parkingmanagerweb.user.User;
 
 public class Tests {
@@ -21,6 +21,14 @@ public class Tests {
         assertEquals(expected, actual);
     }
 
+    public void check_sorteo_estado(){
 
+        Sorteo sorteo1 = new Sorteo("Primer sorteo Junio","19-06-2023","Completado");
+        String expected = "Completado";
+
+        String actual = sorteo1.getEstado();
+
+        assertEquals(expected, actual);
+    }
     
 }
