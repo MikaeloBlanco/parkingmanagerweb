@@ -6,10 +6,16 @@ public class User {
     private String firstName;
     private String lastName1;
     private String lastName2;
-    private char role;
+    private String role;
     
     // Constructores
-    public User(String firstName, String lastName1, String lastName2, char role) {
+    public User(){
+
+        this("","","","");
+
+    }
+
+    public User(String firstName, String lastName1, String lastName2, String role) {
         this.firstName = firstName;
         this.lastName1 = lastName1;
         this.lastName2 = lastName2;
@@ -41,14 +47,16 @@ public class User {
         this.lastName2 = lastName2;
     }
 
-    public char getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(char role) {
+    public void setRole(String role) {
         this.role = role;
     }
 
-
+    public String getFullName() {
+        return this.firstName + " " + this.lastName1 + " " + this.lastName2;
+    }
     
 }

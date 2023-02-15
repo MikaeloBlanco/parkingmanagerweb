@@ -16,12 +16,11 @@ public class UserRepository {
 
     public List<User> getAll() {
 
-        //TODO: Eliminar este codigo, es una simulación
         userList.clear();
 
-        userList.add(new User("David","Hormigo","Ramírez",'p'));
-        userList.add(new User("Perez","Hormigo","Ramírez",'p'));
-        userList.add(new User("Guillermo","Hormigo","Ramírez",'p'));
+        userList.add(new User("David","Hormigo","Ramírez","p"));
+        userList.add(new User("Perez","Hormigo","Ramírez","p"));
+        userList.add(new User("Guillermo","Hormigo","Ramírez","p"));
         return userList;
         
     }
