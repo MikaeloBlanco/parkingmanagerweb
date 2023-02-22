@@ -16,11 +16,21 @@ public class UserController {
 
     @GetMapping("/users")
     public String showAllUsers(Model model){
-
+        //Log.info("Devolviendo usuarios");
         List<User> allUsers = repository.getAll();
 
         model.addAttribute("users",allUsers);
         return "userlist";
+
+    }
+
+    @GetMapping("/createUser")
+    public String showForm(Model model){
+
+        User user = new User();
+        model.addAttribute("user", user);
+
+        return "user/userlist";
 
     }
     
