@@ -10,7 +10,8 @@
     <h1>Todos los usuarios</h1>
     <ol th:each="user : ${users}">
         <li th:text="${user.firstName}">
-
+            <li th:text="${user.lastName1}"></li>
+            <li th:text="${user.lastName2}"></li>
         </li>
     </ol>
 </body>
