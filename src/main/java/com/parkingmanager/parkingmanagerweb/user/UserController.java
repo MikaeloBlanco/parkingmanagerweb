@@ -1,7 +1,5 @@
 package com.parkingmanager.parkingmanagerweb.user;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,9 +15,7 @@ public class UserController {
     @GetMapping("/users")
     public String showAllUsers(Model model){
         //Log.info("Devolviendo usuarios");
-        List<User> allUsers = repository.getAll();
-
-        model.addAttribute("users",allUsers);
+        model.addAttribute("users", repository.findAll());
         return "userlist";
 
     }

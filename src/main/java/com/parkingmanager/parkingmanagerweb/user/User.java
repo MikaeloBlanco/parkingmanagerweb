@@ -11,6 +11,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
 
     // Propiedades
+    private Long id;
     private String firstName;
     private String lastName1;
     private String lastName2;
@@ -65,6 +66,18 @@ public class User {
 
     public String getFullName() {
         return this.firstName + " " + this.lastName1 + " " + this.lastName2;
+    }
+
+    public void setId(Long id){
+
+        this.id = id;
+
+    }
+
+    public Long getId(Long id){
+
+        return id;
+
     }
     
 }
