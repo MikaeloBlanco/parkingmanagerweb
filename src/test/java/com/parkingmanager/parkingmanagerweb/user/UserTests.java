@@ -1,4 +1,4 @@
-package com.parkingmanager.parkingmanagerweb;
+package com.parkingmanager.parkingmanagerweb.user;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
