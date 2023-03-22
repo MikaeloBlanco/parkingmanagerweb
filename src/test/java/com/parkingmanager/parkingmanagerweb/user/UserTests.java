@@ -13,6 +13,7 @@ import com.parkingmanager.parkingmanagerweb.user.User;
 public class UserTests {
 
     private User david;
+    private long id;
     @BeforeEach
     public void init(){
         david = new User("David", "Hormigo",  "Ramírez", "Profesor");
