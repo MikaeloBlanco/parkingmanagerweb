@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 import org.junit.jupiter.api.Test;
 
-import com.parkingmanager.parkingmanagerweb.user.User;
+import com.parkingmanager.parkingmanagerweb.user.domain.User;
 
 public class UserTests {
 
@@ -62,37 +62,37 @@ public class UserTests {
 
     @Test
     void testGetFirstName() {
-        User.getFirstName();
+        david.getFirstName();
     }
 
     @Test
     void testGetFullName() {
-        User.getFullName();
+        david.getFullName();
     }
 
     @Test
     void testGetId() {
-        User.getId();
+        david.getId();
     }
 
     @Test
     void testGetLastName1() {
-        User.getLastName1();
+        david.getLastName1();
     }
 
     @Test
     void testGetLastName2() {
-        User.getLastName2();
+        david.getLastName2();
     }
 
     @Test
     void testGetRole() {
-        User.getRole();
+        david.getRole();
     }
 
     @Test
     void testSetFirstName() {
-        this.firstName = "david";
+        this.firstName = david.getFirstName();
     }
 
     @Test
@@ -102,17 +102,17 @@ public class UserTests {
 
     @Test
     void testSetLastName1() {
-        this.lastName1 = "Hormigo";
+        this.lastName1 = david.getLastName1();
     }
 
     @Test
     void testSetLastName2() {
-        this.lastName2 = "Rodrigez";
+        this.lastName2 = david.getLastName2();
     }
 
     @Test
     void testSetRole() {
-        this.role = "Profesor";
+        this.role = david.getRole();
     }
     
 }

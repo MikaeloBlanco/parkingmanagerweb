@@ -1,4 +1,4 @@
-package com.parkingmanager.parkingmanagerweb.user;
+package com.parkingmanager.parkingmanagerweb.user.domain;
 
 
 

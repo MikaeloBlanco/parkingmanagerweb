@@ -1,4 +1,4 @@
-package com.parkingmanager.parkingmanagerweb.user;
+package com.parkingmanager.parkingmanagerweb.user.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,11 +11,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
 
     // Propiedades
-    private static Long id;
-    private static String firstName;
-    private static String lastName1;
-    private static String lastName2;
-    private static String role;
+    private Long id;
+    private String firstName;
+    private String lastName1;
+    private String lastName2;
+    private String role;
     
     // Constructores
     public User(){
@@ -32,7 +32,7 @@ public class User {
     }
 
     // Métodos
-    public static String getFirstName() {
+    public String getFirstName() {
         return firstName;
     }
 
@@ -40,7 +40,7 @@ public class User {
         this.firstName = firstName;
     }
 
-    public static String getLastName1() {
+    public String getLastName1() {
         return lastName1;
     }
 
@@ -48,7 +48,7 @@ public class User {
         this.lastName1 = lastName1;
     }
 
-    public static String getLastName2() {
+    public String getLastName2() {
         return lastName2;
     }
 
@@ -56,7 +56,7 @@ public class User {
         this.lastName2 = lastName2;
     }
 
-    public static String getRole() {
+    public String getRole() {
         return role;
     }
 
@@ -64,8 +64,8 @@ public class User {
         this.role = role;
     }
 
-    public static String getFullName() {
-        return firstName + " " + lastName1 + " " + lastName2;
+    public String getFullName() {
+        return this.firstName + " " + this.lastName1 + " " + this.lastName2;
     }
 
     public void setId(Long id){
@@ -74,9 +74,9 @@ public class User {
 
     }
 
-    public static Long getId(){
+    public Long getId(){
 
-        return id;
+        return this.id;
 
     }
     
