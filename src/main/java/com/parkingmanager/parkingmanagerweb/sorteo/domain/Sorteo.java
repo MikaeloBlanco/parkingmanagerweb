@@ -1,4 +1,4 @@
-package com.parkingmanager.parkingmanagerweb.sorteo;
+package com.parkingmanager.parkingmanagerweb.sorteo.domain;
 
 //import java.util.Date;
 

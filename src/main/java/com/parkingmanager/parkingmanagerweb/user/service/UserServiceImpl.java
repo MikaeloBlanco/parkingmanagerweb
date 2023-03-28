@@ -1,25 +1,32 @@
 package com.parkingmanager.parkingmanagerweb.user.service;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.List;
-import com.parkingmanager.parkingmanagerweb.user.domain.User;
-import com.parkingmanager.parkingmanagerweb.user.domain.UserRepository;
+
+import com.parkingmanager.parkingmanagerweb.user.domain.*;
 
 @Service
-public class UserServiceImpl implements UserService {
-    
+public class UserServiceImpl implements UserService{
+
     private UserRepository userRepository;
 
-    public UserServiceImpl(@Autowired UserRepository userRepository) {
+    @Autowired
+    public UserServiceImpl(UserRepository userRepository){
         this.userRepository = userRepository;
     }
+
     @Override
-    public User getById(Long id) {
-        return this.userRepository.findById(id).orElseThrow();
+    public Iterable<User> getAll() {
+        return this.userRepository.findAll();
     }
+
     @Override
-    public List<User> readAll() {
-        return (List<User>) userRepository.findAll();
+    public void register(User user) {
+
+        User usuario = new User();
+        BeanUtils.copyProperties(usuario, usuario);
+        this.userRepository.save(usuario);
     }
+    
 }

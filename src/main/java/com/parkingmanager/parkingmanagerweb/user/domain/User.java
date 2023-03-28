@@ -34,8 +34,7 @@ public class User {
         this.role = role;
         this.gender = gender;
     }
-    protected User() {
-        
+    public User() {
     }
     public long getId() {
         return id;

@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import com.parkingmanager.parkingmanagerweb.sorteo.domain.Sorteo;
+
 public class SorteoTests {
 
     private Sorteo sorteo;
