@@ -1,34 +1,51 @@
 package com.parkingmanager.parkingmanagerweb.user.domain;
 
+import jakarta.annotation.Nonnull;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
 @Entity
 public class User {
 
+    // Propiedades
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    @Nonnull
+    private String email;
 
-    // Propiedades
-    private Long id;
     private String firstName;
     private String lastName1;
+
     private String lastName2;
-    private String role;
-    
+
+    private char role;
+
+    private char gender;
+ 
     // Constructores
-    public User(){
-
-        this("","","","");
-
-    }
-
-    public User(String firstName, String lastName1, String lastName2, String role) {
+    public User(String email,String firstName, String lastName1, String lastName2, char role, char gender) {
+        this.email = email;
         this.firstName = firstName;
         this.lastName1 = lastName1;
         this.lastName2 = lastName2;
         this.role = role;
+        this.gender = gender;
+    }
+    protected User() {
+        
+    }
+    public long getId() {
+        return id;
+    }
+    public String getEmail() {
+        return email;
+    }
+    
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     // Métodos
@@ -56,28 +73,19 @@ public class User {
         this.lastName2 = lastName2;
     }
 
-    public String getRole() {
+    public char getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(char role) {
         this.role = role;
     }
-
-    public String getFullName() {
-        return this.firstName + " " + this.lastName1 + " " + this.lastName2;
+    public char getGender() {
+        return gender;
+    }
+    public void setGender(char gender) {
+        this.gender = gender;
     }
 
-    public void setId(Long id){
-
-        this.id = id;
-
-    }
-
-    public Long getId(){
-
-        return this.id;
-
-    }
     
 }

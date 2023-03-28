@@ -17,10 +17,10 @@ public class UserTests {
     private String firstName;
     private String lastName1;
     private String lastName2;
-    private String role;
+    private char role;
     @BeforeEach
     public void init(){
-        david = new User("David", "Hormigo",  "Ramírez", "Profesor");
+        david = new User("dhorram@example.com","David", "Hormigo",  "Ramírez", 'P', 'M');
     }
 
     @Test
@@ -53,66 +53,69 @@ public class UserTests {
     @Test
     public void check_user_role() {
         
-        String expected = "Profesor";
+        char expected = 'P';
 
-        String actual = david.getRole();
+        char actual = david.getRole();
 
         assertEquals(expected, actual);
     }
 
     @Test
-    void testGetFirstName() {
-        david.getFirstName();
+    void check_user_email() {
+        String expected = david.getEmail();
+
+        String actual = "dhorram@example.com";
+
+        assertEquals(expected, actual);
     }
 
     @Test
-    void testGetFullName() {
-        david.getFullName();
+    void check_user_gender() {
+        char expected = david.getGender();
+
+        char actual = 'M';
+
+        assertEquals(expected, actual);
     }
 
     @Test
-    void testGetId() {
-        david.getId();
+    void check_user_set_firstName() {
+        String expected = "david";
+        david.setFirstName("david");
+        String actual = david.getFirstName();
+        assertEquals(expected, actual);
     }
 
     @Test
-    void testGetLastName1() {
-        david.getLastName1();
+    void check_user_set_gender() {
+        char expected = 'M';
+        david.setGender('M');
+        char actual = david.getGender();
+        assertEquals(expected, actual);
     }
 
     @Test
-    void testGetLastName2() {
-        david.getLastName2();
+    void check_user_set_lastName1() {
+        String expected = "Hormigo";
+        david.setFirstName("Hormigo");
+        String actual = david.getLastName1();
+        assertEquals(expected, actual);
     }
 
     @Test
-    void testGetRole() {
-        david.getRole();
+    void check_user_set_lastName2() {
+        String expected = "Ramirez";
+        david.setFirstName("Ramirez");
+        String actual = david.getFirstName();
+        assertEquals(expected, actual);
     }
 
     @Test
-    void testSetFirstName() {
-        this.firstName = david.getFirstName();
-    }
-
-    @Test
-    void testSetId() {
-        this.id = 54674;
-    }
-
-    @Test
-    void testSetLastName1() {
-        this.lastName1 = david.getLastName1();
-    }
-
-    @Test
-    void testSetLastName2() {
-        this.lastName2 = david.getLastName2();
-    }
-
-    @Test
-    void testSetRole() {
-        this.role = david.getRole();
+    void check_user_set_role() {
+        char expected = 'P';
+        david.setRole('P');
+        char actual = david.getRole();
+        assertEquals(expected, actual);
     }
     
 }

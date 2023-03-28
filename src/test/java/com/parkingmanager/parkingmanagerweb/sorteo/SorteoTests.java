@@ -42,24 +42,24 @@ public class SorteoTests {
     @Test
     void testSetDescripcion() {
         String expected = "descripcion";
-        String actual = "descripcion";
-
+        sorteo.setDescripcion("descripcion");
+        String actual = sorteo.getDescripcion();
         assertEquals(expected,actual);
     }
 
     @Test
     void testSetEstado() {
         String expected = "Completado";
-        String actual = "Completado";
-
+        sorteo.setEstado("Completado");
+        String actual = sorteo.getEstado();
         assertEquals(expected,actual);
     }
 
     @Test
     void testSetFecha() {
         String expected = "01-01-01";
-        String actual = "01-01-01";
-
+        sorteo.setFecha("01-01-01");
+        String actual = sorteo.getFecha();
         assertEquals(expected,actual);
     }
 }
