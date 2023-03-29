@@ -1,7 +1,7 @@
 package com.parkingmanager.parkingmanagerweb.user.service;
 
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.parkingmanager.parkingmanagerweb.user.domain.*;
@@ -11,7 +11,6 @@ public class UserServiceImpl implements UserService{
 
     private UserRepository userRepository;
 
-    @Autowired
     public UserServiceImpl(UserRepository userRepository){
         this.userRepository = userRepository;
     }

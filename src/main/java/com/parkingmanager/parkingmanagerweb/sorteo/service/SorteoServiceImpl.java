@@ -1,7 +1,7 @@
 package com.parkingmanager.parkingmanagerweb.sorteo.service;
 
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.parkingmanager.parkingmanagerweb.sorteo.domain.*;
@@ -11,7 +11,6 @@ public class SorteoServiceImpl implements SorteoService{
 
     private SorteoRepository sorteoRepository;
 
-    @Autowired
     public SorteoServiceImpl(SorteoRepository sorteoRepository){
         this.sorteoRepository = sorteoRepository;
     }

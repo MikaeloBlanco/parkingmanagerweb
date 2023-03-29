@@ -50,4 +50,8 @@ public class Sorteo {
         this.estado = estado;
     }
 
+    public long getId() {
+        return id;
+    }
+
 }
