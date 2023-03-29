@@ -13,11 +13,6 @@ import com.parkingmanager.parkingmanagerweb.user.domain.User;
 public class UserTests {
 
     private User david;
-    private long id;
-    private String firstName;
-    private String lastName1;
-    private String lastName2;
-    private char role;
     @BeforeEach
     public void init(){
         david = new User("dhorram@example.com","David", "Hormigo",  "Ramírez", 'P', 'M');
