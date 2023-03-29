@@ -1,8 +1,63 @@
-/*Inicio*/
- 
-.titulo {
-    color: #067786;
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 60px;
+/*Index*/
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
+
+.usuarios, .sorteos, .prueba, .formulario {
+	background-color: #eee;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	margin: 20px;
+	padding: 20px;
+	text-align: center;
+	width: 300px;
+	height: 300px;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+p {
+	margin-bottom: 0;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+  }
+  /*Usuarios*/
+
+
+  .datos-personales {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  .datos-personales h1 {
+    text-align: center;
+  }
+  
+  .datos-personales form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .datos-personales label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .datos-personales input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  

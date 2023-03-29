@@ -4,16 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Todos los usuarios</h1>
-    <ol th:each="user : ${users}">
-        <li th:text="${user.firstName}">
-            <li th:text="${user.lastName1}"></li>
-            <li th:text="${user.lastName2}"></li>
-            <li th:text="${user.role}"></li>
-        </li>
-    </ol>
-</body>
+    <title>Datos Personales</title>
+    <link rel="stylesheet" href="styles.css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Datos Personales</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <form action="#" method="post" th:action="@{/CreateUser}" th:object="${userDao}">
+    <section class="datos-personales">
+      <h1>Datos Personales</h1>
+      <form>
+        <div>
+          <label th:each="user : ${users}">Nombre de Usuario:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+          <label th:text="${user.lastName1}">Apellido1:</label>
+          <input type="text" id="apellido1" name="apellido1" required>
+        </div>
+        <div>
+          <label th:text="${user.lastName2}">Apellido2:</label>
+          <input type="text" id="apellido2" name="apellido2" required>
+        </div>
+        <div>
+          <label th:text="${user.role}">Rol:</label>
+          <input type="text" id="rol" name="rol" required>
+        </div>
+      </form>
+    </section>
+  </body>
 </html>
