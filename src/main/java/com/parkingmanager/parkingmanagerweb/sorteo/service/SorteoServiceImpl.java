@@ -24,7 +24,7 @@ public class SorteoServiceImpl implements SorteoService{
     public void register(Sorteo pool) {
 
         Sorteo sorteo = new Sorteo(null, null, null);
-        BeanUtils.copyProperties(sorteo, sorteo);
+        BeanUtils.copyProperties(pool, sorteo);
         this.sorteoRepository.save(sorteo);
     }
     

@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService{
     public void register(User user) {
 
         User usuario = new User();
-        BeanUtils.copyProperties(usuario, usuario);
+        BeanUtils.copyProperties(user, usuario);
         this.userRepository.save(usuario);
     }
     

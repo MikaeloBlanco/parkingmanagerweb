@@ -1,6 +1,7 @@
 package com.parkingmanager.parkingmanagerweb.sorteo.service;
 
-import com.parkingmanager.parkingmanagerweb.sorteo.domain.*;
+import com.parkingmanager.parkingmanagerweb.sorteo.domain.Sorteo;
+
 
 public interface SorteoService {
     
