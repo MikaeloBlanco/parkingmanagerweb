@@ -19,7 +19,7 @@ public class UserController {
     public String showAllUsers(Model model){
         //Log.info("Devolviendo usuarios");
         model.addAttribute("users", repository.findAll());
-        return "userlist";
+        return "users";
 
     }
 
