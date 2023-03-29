@@ -1,12 +1,13 @@
 package com.parkingmanager.parkingmanagerweb.sorteo.domain;
 
 import jakarta.annotation.Nonnull;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 //import java.util.Date;
-
+@Entity
 public class Sorteo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
