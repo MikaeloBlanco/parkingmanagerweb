@@ -1,9 +1,17 @@
 package com.parkingmanager.parkingmanagerweb.sorteo.domain;
 
+import jakarta.annotation.Nonnull;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 //import java.util.Date;
 
 public class Sorteo {
-    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    @Nonnull
     private String descripcion;
     private String fecha;
     private String estado;
