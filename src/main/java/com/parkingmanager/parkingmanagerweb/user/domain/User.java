@@ -17,45 +17,24 @@ public class User {
     // Propiedades
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    /**
-     * Parametro de valor autogenerado e identificación de nombre id
-     */
     private long id;
     @Nonnull
-    /**
-     * Parametro no nulo de tipo string de nombre email
-     */
     private String email;
-    /**
-     * Parametro de tipo string de nombre firstName que almacena el nombre de la persona
-     */
     private String firstName;
-    /**
-     * Parametro de tipo string de nombre lastName1 el cual tiene la función de almacenar el primer apellido de la persona
-     */
     private String lastName1;
-    /**
-     * Parametro de tipo string de nombre lastName2 el cual tiene la funcion de almacenar el segundo apellido de la persona
-     */
     private String lastName2;
-    /**
-     * Parametro de tipo character de nombre role para la asignación de un rol preasignado
-     */
     private char role;
-    /**
-     * Parametro de tipo character de nombre gender para la asignación de un género identificable
-     */
     private char gender;
  
     // Constructores
     /**
      * Constructor de la clase User
-     * @param email
-     * @param firstName
-     * @param lastName1
-     * @param lastName2
-     * @param role
-     * @param gender
+     * @param email Parametro no nulo de tipo string de nombre email
+     * @param firstName Parametro de tipo string de nombre firstName que almacena el nombre de la persona
+     * @param lastName1 Parametro de tipo string de nombre lastName1 el cual tiene la función de almacenar el primer apellido de la persona
+     * @param lastName2 Parametro de tipo string de nombre lastName2 el cual tiene la funcion de almacenar el segundo apellido de la persona
+     * @param role Parametro de tipo character de nombre role para la asignación de un rol preasignado
+     * @param gender Parametro de tipo character de nombre gender para la asignación de un género identificable
      */
     public User(String email,String firstName, String lastName1, String lastName2, char role, char gender) {
         this.email = email;
@@ -86,7 +65,7 @@ public class User {
     }
     /**
      * Setter del parametro email
-     * @param email
+     * @param email Parametro no nulo de tipo string de nombre email
      */
     public void setEmail(String email) {
         this.email = email;
@@ -102,7 +81,7 @@ public class User {
     }
     /**
      * Setter del parametro firstName
-     * @param firstName
+     * @param firstName Parametro de tipo string de nombre firstName que almacena el nombre de la persona
      */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -116,7 +95,7 @@ public class User {
     }
     /**
      * Setter del parametro lastName1
-     * @param lastName1
+     * @param lastName1 Parametro de tipo string de nombre lastName1 el cual tiene la función de almacenar el primer apellido de la persona
      */
     public void setLastName1(String lastName1) {
         this.lastName1 = lastName1;
@@ -130,7 +109,7 @@ public class User {
     }
     /**
      * Setter del parametro lastName2
-     * @param lastName2
+     * @param lastName2 Parametro de tipo string de nombre lastName2 el cual tiene la funcion de almacenar el segundo apellido de la persona
      */
     public void setLastName2(String lastName2) {
         this.lastName2 = lastName2;
@@ -144,7 +123,7 @@ public class User {
     }
     /**
      * Setter del parametro role
-     * @param role
+     * @param role Parametro de tipo character de nombre role para la asignación de un rol preasignado
      */
     public void setRole(char role) {
         this.role = role;
@@ -158,7 +137,7 @@ public class User {
     }
     /**
      * Setter del parametro gender
-     * @param gender
+     * @param gender Parametro de tipo character de nombre gender para la asignación de un género identificable
      */
     public void setGender(char gender) {
         this.gender = gender;

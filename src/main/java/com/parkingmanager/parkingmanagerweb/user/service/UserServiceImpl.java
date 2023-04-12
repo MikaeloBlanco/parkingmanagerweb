@@ -10,9 +10,6 @@ import com.parkingmanager.parkingmanagerweb.user.domain.*;
  */
 @Service
 public class UserServiceImpl implements UserService{
-    /**
-     * Parametro de repositorio de usuarios
-     */
     private UserRepository userRepository;
     /**
      * Constructor de UserServiceImpl que introduce nuevos usuarios al repositorio

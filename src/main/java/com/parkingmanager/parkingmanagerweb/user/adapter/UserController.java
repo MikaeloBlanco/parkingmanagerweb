@@ -17,9 +17,6 @@ import com.parkingmanager.parkingmanagerweb.user.domain.UserRepository;
 
 @Controller
 public class UserController {
-    /**
-     * Respositorio de la clase UserController que almacena los usuarios dentro de una base de datos. Esta autoconectado
-    */
     @Autowired
     private UserRepository repository;
 
