@@ -25,7 +25,7 @@ public class UserController {
 
     /**
      * Auto mapeo de los usuarios dentro de la pagina web
-     * @param model
+     * @param model Modelo de datos del controlador
      * @return todos los usuarios de la base de datos
      */
     @GetMapping("/users")
@@ -37,7 +37,7 @@ public class UserController {
     }
     /**
      * Auto mapeo del menú de creación de usuario dentro de la pagina web
-     * @param model
+     * @param model Modelo de datos del controlador 
      * @return Error de pagina blanca Ya que no se puede crear un usuario 
      */
     @GetMapping("/createUser")
