@@ -5,20 +5,38 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
+/**
+ * @author Miguel Blanco Fernández, Adolfo Burgos Belgrano
+ * @version 0.0.1
+ * @since 29/03/2023
+ * La entidad clase User que permite la creación e identificación de usuarios de sistema.
+ */
 @Entity
 public class User {
 
     // Propiedades
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    /**
+     * Parametro de valor autogenerado e identificación de nombre id
+     */
     private long id;
     @Nonnull
+    /**
+     * Parametro no nulo de tipo string de nombre email
+     */
     private String email;
-
+    /**
+     * Parametro de tipo string de nombre firstName que almacena el nombre de la persona
+     */
     private String firstName;
+    /**
+     * Parametro de tipo string de nombre lastName1 el cual tiene la función de almacenar el primer apellido de la persona
+     */
     private String lastName1;
-
+    /**
+     * Parametro de tipo string de nombre lastName2 el cual tiene la funcion de almacenar el segundo apellido de la persona
+     */
     private String lastName2;
 
     private char role;
