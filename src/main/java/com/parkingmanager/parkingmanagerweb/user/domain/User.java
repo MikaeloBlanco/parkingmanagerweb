@@ -1,10 +1,17 @@
 package com.parkingmanager.parkingmanagerweb.user.domain;
 
+import java.util.Set;
+
+import com.parkingmanager.parkingmanagerweb.sorteo.domain.Sorteo;
+
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 /**
  * @author Miguel Blanco Fernández, Adolfo Burgos Belgrano
  * @version 0.0.1
@@ -25,7 +32,13 @@ public class User {
     private String lastName2;
     private Role role;
     private char gender;
- 
+    @ManyToMany
+    @JoinTable(
+        name = "user_sorteos",
+        joinColumns = @JoinColumn(name="user_id"),
+        inverseJoinColumns = @JoinColumn(name = "sorteo_id")
+    )
+    private Set<Sorteo>IncludedIn;
     // Constructores
     /**
      * Constructor de la clase User

@@ -1,10 +1,15 @@
 package com.parkingmanager.parkingmanagerweb.sorteo.domain;
 
+import java.util.Set;
+
+import com.parkingmanager.parkingmanagerweb.user.domain.User;
+
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 
 //import java.util.Date;
 /**
@@ -23,6 +28,8 @@ public class Sorteo {
     private String descripcion;
     private String fecha;
     private Status estado;
+    @ManyToMany(mappedBy = "includedIn")
+    private Set<User> usersIncluded;
 /**
  * 
  * @param descripcion
