@@ -6,6 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.parkingmanager.parkingmanagerweb.sorteo.domain.Sorteo;
+import com.parkingmanager.parkingmanagerweb.sorteo.domain.Status;
+
 
 public class SorteoTests {
 
@@ -13,7 +15,7 @@ public class SorteoTests {
     @BeforeEach
     public void init(){
 
-        sorteo = new Sorteo("Realizado en Junio del 2003", "01-06-2003", "Completado");
+        sorteo = new Sorteo("Realizado en Junio del 2003", "01-06-2003", Status.FINISHED);
 
     }
     
@@ -28,7 +30,7 @@ public class SorteoTests {
     @Test
     void testGetEstado() {
         String expected ="Completado";
-        String actual = sorteo.getEstado();
+        Status actual = sorteo.getEstado();
 
         assertEquals(expected, actual);
     }
@@ -51,9 +53,9 @@ public class SorteoTests {
 
     @Test
     void testSetEstado() {
-        String expected = "Completado";
-        sorteo.setEstado("Completado");
-        String actual = sorteo.getEstado();
+        Status expected = Status.FINISHED;
+        sorteo.setEstado(Status.FINISHED);
+        Status actual = sorteo.getEstado();
         assertEquals(expected,actual);
     }
 

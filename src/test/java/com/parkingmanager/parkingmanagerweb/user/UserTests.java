@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 import org.junit.jupiter.api.Test;
 
+import com.parkingmanager.parkingmanagerweb.user.domain.Role;
 import com.parkingmanager.parkingmanagerweb.user.domain.User;
 
 public class UserTests {
@@ -15,7 +16,7 @@ public class UserTests {
     private User david;
     @BeforeEach
     public void init(){
-        david = new User("dhorram@example.com","David", "Hormigo",  "Ramírez", 'P', 'M');
+        david = new User("dhorram@example.com","David", "Hormigo",  "Ramírez", Role.PROFESSOR, 'M');
     }
 
     @Test
@@ -48,9 +49,9 @@ public class UserTests {
     @Test
     public void check_user_role() {
         
-        char expected = 'P';
+        Role expected = Role.PROFESSOR;
 
-        char actual = david.getRole();
+        Role actual = david.getRole();
 
         assertEquals(expected, actual);
     }
@@ -107,9 +108,9 @@ public class UserTests {
 
     @Test
     void check_user_set_role() {
-        char expected = 'P';
-        david.setRole('P');
-        char actual = david.getRole();
+        Role expected = Role.PROFESSOR;
+        david.setRole(Role.PROFESSOR);
+        Role actual = david.getRole();
         assertEquals(expected, actual);
     }
     

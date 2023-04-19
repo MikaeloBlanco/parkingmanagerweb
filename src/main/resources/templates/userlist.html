@@ -8,11 +8,7 @@
         <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-<<<<<<< HEAD
-    <form action="#" method="post" th:action="@{/createUser}" th:object="${User}">
-=======
-    <form action="#" method="post" th:action="@{/CreateUser}" th:object="${User}">
->>>>>>> Miguel
+    <form action="#" method="post" th:action="@{/CreateUser}" th:object="${user}">
     <section class="datos-personales">
       <h1>Datos Personales</h1>
       <form>
@@ -21,15 +17,15 @@
           <input type="text" id="username" name="username" required>
         </div>
         <div>
-          <label th:text="${User.lastName1}">Apellido1:</label>
+          <label th:text="${user.lastName1}">Apellido1:</label>
           <input type="text" id="apellido1" name="apellido1" required>
         </div>
         <div>
-          <label th:text="${User.lastName2}">Apellido2:</label>
+          <label th:text="${user.lastName2}">Apellido2:</label>
           <input type="text" id="apellido2" name="apellido2" required>
         </div>
         <div>
-          <label th:text="${User.role}">Rol:</label>
+          <label th:text="${user.role}">Rol:</label>
           <input type="text" id="rol" name="rol" required>
         </div>
       </form>
