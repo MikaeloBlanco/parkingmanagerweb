@@ -22,22 +22,25 @@ public class Sorteo {
     @Nonnull
     private String descripcion;
     private String fecha;
-    private String estado;
+    private Status estado;
 /**
  * 
  * @param descripcion
  * @param fecha
- * @param estado
+ * @param string
  */
-    public Sorteo(String descripcion, String fecha, String estado){
+    public Sorteo(String descripcion, String fecha, Status string){
 
         this.descripcion = descripcion;
-
         this.fecha = fecha;
-
-        this.estado = estado;
+        this.estado = string;
 
     }
+
+protected Sorteo() {
+    this("","",null );
+   
+}
 /**
  * 
  * @return Devuelve la descripcion
@@ -71,15 +74,15 @@ public class Sorteo {
  * 
  * @return Devuelve el estado registrado.
  */
-    public String getEstado() {
+    public Status getEstado() {
         return estado;
     }
 /**
  * 
- * @param estado
+ * @param string
  */
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setEstado(Status string) {
+        this.estado = string;
     }
 /**
  * 
