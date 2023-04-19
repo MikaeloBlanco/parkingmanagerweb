@@ -23,7 +23,7 @@ public class User {
     private String firstName;
     private String lastName1;
     private String lastName2;
-    private char role;
+    private Role role;
     private char gender;
  
     // Constructores
@@ -36,7 +36,7 @@ public class User {
      * @param role Parametro de tipo character de nombre role para la asignación de un rol preasignado
      * @param gender Parametro de tipo character de nombre gender para la asignación de un género identificable
      */
-    public User(String email,String firstName, String lastName1, String lastName2, char role, char gender) {
+    public User(String email,String firstName, String lastName1, String lastName2, Role role, char gender) {
         this.email = email;
         this.firstName = firstName;
         this.lastName1 = lastName1;
@@ -116,16 +116,16 @@ public class User {
     }
     /**
      * Getter del parametro role
-     * @return rol del usuario
+     * @param role Parametro de tipo Role de nombre role para la adquisición de un rol restringido
      */
-    public char getRole() {
+    public Role getRole() {
         return role;
     }
     /**
      * Setter del parametro role
-     * @param role Parametro de tipo character de nombre role para la asignación de un rol preasignado
+     * @param role Parametro de tipo Role de nombre role para la asignación de un rol preasignado
      */
-    public void setRole(char role) {
+    public void setRole(Role role) {
         this.role = role;
     }
     /**
