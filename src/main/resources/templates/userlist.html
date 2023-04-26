@@ -9,6 +9,9 @@
   </head>
   <body>
     <form action="#" method="post" th:action="@{/CreateUser}" th:object="${user}">
+      <div th:if="${#fields.hasErrors('*')}"> 
+        <p th:each="err : ${#fields.errors('*')}" th:text="${err}"></p> 
+    </div>
     <section class="datos-personales">
       <h1>Datos Personales</h1>
       <form>

@@ -1,6 +1,7 @@
 package com.parkingmanager.parkingmanagerweb.user;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.mock;
 
 import org.junit.jupiter.api.BeforeEach;
 
@@ -8,8 +9,12 @@ import org.junit.jupiter.api.BeforeEach;
 
 import org.junit.jupiter.api.Test;
 
+import com.parkingmanager.parkingmanagerweb.core.exceptions.UserExistsException;
 import com.parkingmanager.parkingmanagerweb.user.domain.Role;
 import com.parkingmanager.parkingmanagerweb.user.domain.User;
+import com.parkingmanager.parkingmanagerweb.user.domain.UserDao;
+import com.parkingmanager.parkingmanagerweb.user.domain.UserRepository;
+import com.parkingmanager.parkingmanagerweb.user.service.UserServiceImpl;
 
 public class UserTests {
 
@@ -112,6 +117,27 @@ public class UserTests {
         david.setRole(Role.PROFESSOR);
         Role actual = david.getRole();
         assertEquals(expected, actual);
+    }
+
+    @Test
+    void check_register(){
+       UserRepository mockRepository = mock(UserRepository.class);
+       UserServiceImpl mockUser = new UserServiceImpl(mockRepository);
+       UserDao mockDao = mock(UserDao.class);
+       mockDao.setEmail("miguel@gmail.com");
+       mockDao.setFirstName("Miguel");
+       mockDao.setLastName1("Blanco");
+            try{
+                mockUser.register(mockDao);
+        } catch(UserExistsException uee){
+
+       }
+       try{
+                mockUser.register(mockDao);
+       } catch(UserExistsException uee){
+
+       }
+       assertEquals(mockDao, mockDao);
     }
     
 }

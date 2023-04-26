@@ -16,6 +16,9 @@
     <section class="datos-personales">
       <h1>Datos Personales</h1>
       <form>
+        <div th:if="${#fields.hasErrors('*')}"> 
+          <p th:each="err : ${#fields.errors('*')}" th:text="${err}"></p> 
+      </div>
         <div>
           <label th:each="user : ${users}">Nombre de Usuario:</label>
           <input type="text" id="username" name="username" required>
