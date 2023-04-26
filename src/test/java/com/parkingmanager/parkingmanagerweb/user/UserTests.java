@@ -13,12 +13,12 @@ import com.parkingmanager.parkingmanagerweb.core.exceptions.UserExistsException;
 import com.parkingmanager.parkingmanagerweb.user.domain.Role;
 import com.parkingmanager.parkingmanagerweb.user.domain.User;
 import com.parkingmanager.parkingmanagerweb.user.domain.UserDao;
+import com.parkingmanager.parkingmanagerweb.user.domain.UserRepository;
 import com.parkingmanager.parkingmanagerweb.user.service.UserServiceImpl;
 
 public class UserTests {
 
     private User david;
-    private Object userService;
     @BeforeEach
     public void init(){
         david = new User("dhorram@example.com","David", "Hormigo",  "Ramírez", Role.PROFESSOR, 'M');
@@ -121,21 +121,23 @@ public class UserTests {
 
     @Test
     void check_register(){
+       UserRepository mockRepository = mock(UserRepository.class);
+       UserServiceImpl mockUser = new UserServiceImpl(mockRepository);
        UserDao mockDao = mock(UserDao.class);
-       UserDao mockDao2 = mock(UserDao.class);
        mockDao.setEmail("miguel@gmail.com");
-       try{
-       ((UserServiceImpl) this.userService).register(mockDao);
-       } catch(UserExistsException uee){
+       mockDao.setFirstName("Miguel");
+       mockDao.setLastName1("Blanco");
+            try{
+                mockUser.register(mockDao);
+        } catch(UserExistsException uee){
 
        }
        try{
-        ((UserServiceImpl) this.userService).register(mockDao);
+                mockUser.register(mockDao);
        } catch(UserExistsException uee){
 
        }
-       mockDao2.setEmail("miguel@gmail.com");
-       assertEquals(mockDao, mockDao2);
+       assertEquals(mockDao, mockDao);
     }
     
 }
