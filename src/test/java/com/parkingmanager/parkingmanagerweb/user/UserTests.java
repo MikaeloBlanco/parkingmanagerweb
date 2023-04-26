@@ -120,7 +120,7 @@ public class UserTests {
     }
 
     @Test
-    void check_register(UserDao userDao){
+    void check_register(){
        UserDao mockDao = mock(UserDao.class);
        UserDao mockDao2 = mock(UserDao.class);
        mockDao.setEmail("miguel@gmail.com");
