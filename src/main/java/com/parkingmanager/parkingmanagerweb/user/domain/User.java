@@ -5,6 +5,7 @@ import java.util.Set;
 import com.parkingmanager.parkingmanagerweb.sorteo.domain.Sorteo;
 
 import jakarta.annotation.Nonnull;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,7 +26,8 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @Nonnull
+    @Nonnull    
+    @Column(unique = true)
     private String email;
     private String firstName;
     private String lastName1;

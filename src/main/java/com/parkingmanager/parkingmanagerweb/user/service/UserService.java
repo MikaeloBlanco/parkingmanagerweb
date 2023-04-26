@@ -1,6 +1,8 @@
 package com.parkingmanager.parkingmanagerweb.user.service;
 
+import com.parkingmanager.parkingmanagerweb.core.exceptions.UserExistsException;
 import com.parkingmanager.parkingmanagerweb.user.domain.User;
+import com.parkingmanager.parkingmanagerweb.user.domain.UserDao;
 /**
  * Interfaz de servicio para la clase User
  * @author Miguel Blanco Fernández, Adolfo Burgos Belgrano
@@ -17,6 +19,10 @@ public interface UserService{
      * Registra un objeto de la clase User y no devuelve nada
      * @param user Es un objeto de la clase User que se introduce dentro de la base de datos
      */
-    public void register(User user);
+    public void register(UserDao userDao) throws UserExistsException;
+    /**
+     * 
+     */
+    public boolean userExists(String email);
 
 }
